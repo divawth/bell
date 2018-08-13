@@ -63,12 +63,92 @@
   };
   var lpad_1 = lpad;
 
+  /**
+   * @file 获得小数的位数
+   * @author wth
+   */
+  const decimalLength$1 = str => {
+    let parts = ('' + str).split('.');
+    return parts.length === 2 ? parts[1].length : 0;
+  };
+  var decimalLength_1 = decimalLength$1;
+
+  /**
+   * @file 把小数换成整数避免小数计算的精度问题
+   * @author wth
+   */
+  const float2Int$1 = (float, length = 0) => {
+    let parts = ('' + float).split('.');
+    let result = '';
+
+    if (parts.length === 1) {
+      result = float + new Array(length + 1).join('0');
+    } else {
+      length = Math.max(0, length - parts[1].length);
+      result = parts.join('') + new Array(length + 1).join('0');
+    }
+    return +result;
+  };
+
+  /**
+   * @file 加法
+   * @author wth
+   */
+  const plus = (a, b) => {
+    let length = Math.max(decimalLength(a), decimalLength(b));
+    a = float2Int(a, length);
+    b = float2Int(b, length);
+
+    return (a + b) / Math.pow(10, length);
+  };
+
+  /**
+   * @file 减法
+   * @author wth
+   */
+  const minus = (a, b) => {
+    let length = Math.max(decimalLength(a), decimalLength(b));
+    a = float2Int(a, length);
+    b = float2Int(b, length);
+
+    return (a - b) / Math.pow(10, length);
+  };
+
+  /**
+   * @file 除法
+   * @author wth
+   */
+  const divide = (a, b) => {
+    let length = Math.max(decimalLength(a), decimalLength(b));
+    a = float2Int(a, length);
+    b = float2Int(b, length);
+    return a / b;
+  };
+
+  /**
+   * @file 减法
+   * @author wth
+   */
+  const multiply = (a, b) => {
+    let length = Math.max(decimalLength(a), decimalLength(b));
+    a = float2Int(a, length);
+    b = float2Int(b, length);
+    let factor = Math.pow(10, length);
+    return a * b / (factor * factor);
+  };
+
   class Util {
     constructor() {
       this.getType = getType_1;
       this.isNumeric = isNumeric_1;
       this.toNumber = toNumber;
       this.lpad = lpad_1;
+      this.decimalLength = decimalLength_1;
+      this.float2Int = float2Int$1;
+      this.plus = plus;
+      this.minus = minus;
+      this.divide = divide;
+      this.multiply = multiply;
     }
   }
 
