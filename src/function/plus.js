@@ -2,6 +2,9 @@
  * @file 加法
  * @author wth
  */
+import decimalLength from './decimalLength';
+import float2Int from './float2Int';
+
 const plus = (a, b) => {
   let length = Math.max(
     decimalLength(a),

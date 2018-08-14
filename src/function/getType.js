@@ -6,4 +6,4 @@ const getType = (x) => {
   return x === undefined ? 'undefined' : x === null ? 'null' : x.constructor.name.toLowerCase();
 };
 
-module.exports = getType;
+export default getType;

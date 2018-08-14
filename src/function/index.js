@@ -8,6 +8,11 @@ import plus from './plus';
 import minus from './minus';
 import divide from './divide';
 import multiply from './multiply';
+import createTimer from './createTimer';
+import debounce from './debounce';
+import throttle from './throttle';
+import decodeHTML from './decodeHTML';
+import encodeHTML from './encodeHTML';
 
 export default class Util {
   constructor() {
@@ -21,5 +26,10 @@ export default class Util {
     this.minus = minus;
     this.divide = divide;
     this.multiply = multiply;
+    this.createTimer = createTimer;
+    this.debounce = debounce;
+    this.throttle = throttle;
+    this.decodeHTML = decodeHTML;
+    this.encodeHTML = encodeHTML;
   }
 };

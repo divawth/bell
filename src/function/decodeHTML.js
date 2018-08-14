@@ -1,0 +1,26 @@
+/**
+ * @file decode html 字符
+ * @author wth
+ */
+/**
+ * decode html 字符
+ *
+ * @param {string} source 字符串
+ * @return {string}
+ */
+const decodeHTML = source => {
+  let str = String(source)
+          .replace(/&amp;/g, '&')
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&quot;/g, '"')
+          .replace(/&#39;/g, "'");
+  // 处理转义的中文和实体字符
+  return str.replace(
+    /&#([\d]+);/g,
+    function ($0, $1) {
+      return String.fromCharCode(parseInt($1, 10));
+    }
+  );
+};
+export default decodeHTML;

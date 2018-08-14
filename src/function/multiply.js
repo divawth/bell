@@ -2,6 +2,9 @@
  * @file 减法
  * @author wth
  */
+import decimalLength from './decimalLength';
+import float2Int from './float2Int';
+
 const multiply = (a, b) => {
   let length = Math.max(
     decimalLength(a),

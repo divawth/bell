@@ -3,4 +3,4 @@
  * @author wth
  */
 const isNumeric = val => typeof val === 'number' || typeof +val === 'number';
-module.exports = isNumeric;
+export default isNumeric;

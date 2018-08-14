@@ -8,4 +8,4 @@ const lpad = (num, length = 2) => {
   );
   return arr.join('0') + num;
 };
-module.exports = lpad;
+export default lpad;
