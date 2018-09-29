@@ -1,4 +1,4 @@
-require('./dist/bell');
+require('../dist/bell');
 
 describe('我的测试', function () {
   describe('bell', function () {
