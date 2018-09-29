@@ -4,7 +4,7 @@
     "description": "edp project",
     "main": "index.js",
     "scripts": {
-        "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js",
+        "unit": "cross-env BABEL_ENV=test mocha",
         "codecov": "codecov",
         "test": "npm run unit && npm run codecov"
     },
@@ -32,6 +32,7 @@
     "readme": "README",
     "devDependencies": {
         "babel-plugin-istanbul": "^5.0.1",
+        "codecov": "^3.1.0",
         "cross-env": "^5.2.0",
         "jasmine-core": "^3.2.0",
         "karma": "^3.0.0",
