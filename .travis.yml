@@ -5,8 +5,6 @@ cache:
 branches:
   only:
     - master
-before_script:
-  - "export PATH=$HOME/.meteor:$PATH"
 script:
   - npm test
 notifications:
