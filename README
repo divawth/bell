@@ -2,4 +2,4 @@ npm install karma --save-dev
 
 karma start my.conf.js --log-level debug --single-run
 
-https://travis-ci.com/divawth/bell.svg?branch=master
+![](https://travis-ci.com/divawth/bell.svg?branch=master)
