@@ -1,5 +1,3 @@
-require('../dist/bell');
-
 describe('我的测试', function () {
   describe('bell', function () {
     it('run start', function () {
