@@ -7,11 +7,10 @@ branches:
     - master
 script:
   - npm test
+  - export PATH="$PWD/"
 notifications:
   webhooks:
     urls:
       - https://www.travisbuddy.com/
     on_success: always 
     on_failure: always 
-before_install:
-  - export PATH="$HOME/.yarn/bin:$PATH"
