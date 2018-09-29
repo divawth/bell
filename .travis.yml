@@ -13,3 +13,5 @@ notifications:
       - https://www.travisbuddy.com/
     on_success: always 
     on_failure: always 
+before_install:
+  - export PATH="$HOME/"
