@@ -6,8 +6,8 @@ branches:
   only:
     - master
 script:
-  - npm test
   - export PATH="$PWD/"
+  - npm test
 notifications:
   webhooks:
     urls:
