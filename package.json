@@ -6,7 +6,7 @@
     "scripts": {
         "unit": "cross-env BABEL_ENV=test mocha",
         "codecov": "codecov",
-        "test": "mocha"
+        "test": "./node_modules/.bin/mocha"
     },
     "edp": {
         "wwwroot": "/",
