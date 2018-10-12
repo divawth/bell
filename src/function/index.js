@@ -13,6 +13,8 @@ import debounce from './debounce';
 import throttle from './throttle';
 import decodeHTML from './decodeHTML';
 import encodeHTML from './encodeHTML';
+import toBoolean from './toBoolean';
+import toString from './toString';
 
 export default {
   getType,
@@ -29,5 +31,7 @@ export default {
   debounce,
   throttle,
   decodeHTML,
-  encodeHTML
+  encodeHTML,
+  toBoolean,
+  toString
 };
